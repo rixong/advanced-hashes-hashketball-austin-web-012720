@@ -137,6 +137,6 @@ end
 def long_name_steals_a_ton?
   arr = []
   game_hash.each_value { |team| arr.push(team[:players])}
-  arr.flatten.max { |a, b| a[:steals] <=> b[:steals]}[:player_name]
+  player_with_longest_name == arr.flatten.max { |a, b| a[:steals] <=> b[:steals]}[:player_name]
 end
 
